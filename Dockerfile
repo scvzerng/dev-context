@@ -8,6 +8,7 @@ RUN tar -zxvf apache-activemq-5.15.2-bin.tar.gz
 #mongodb
 ADD mongodb-linux-x86_64-3.4.0 mongodb
 RUN mkdir -p /mongodb/db /mongodb/logs
+RUN touch /mongodb/logs/logfile.log
 ADD start.sh /start.sh
 RUN chmod 777 /start.sh
 EXPOSE 27017 61616 8161
